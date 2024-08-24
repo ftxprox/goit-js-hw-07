@@ -26,11 +26,13 @@ const images = [
 ];
 
 const gallery = document.querySelector("ul.gallery");
-const imagesMarkup = images.map(image => `<li><img src="${image.url}" alt="${image.alt}" width="400px" height="340px" style="object-fit: cover"></li>`);
+const imagesMarkup = images.map(image => `<li><img src="${image.url}" alt="${image.alt}" width="360px" height="300px" style="object-fit: cover"></li>`).join("");
 gallery.insertAdjacentHTML("beforeend", imagesMarkup);
 gallery.style.listStyle = "none";
 gallery.style.display = "flex";
+gallery.style.justifyContent = "center";
 gallery.style.alignItems = "center";
-gallery.style.flexWrap = "wrap";
-gallery.style.columnGap = "36px";
+gallery.style.rowGap = "48px";
+gallery.style.columnGap = "24px";
 gallery.style.width = "1440px";
+gallery.style.flexWrap = "wrap";
